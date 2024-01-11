@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 
 
 const authRouter = require("./routes/auth");
+const adminRouter = require("./routes/admin");
 
 const PORT = 3000;
 const app = express();
@@ -12,6 +13,7 @@ const DB = `mongodb+srv://prem:prem123@cluster0.ccndr6n.mongodb.net/?retryWrites
 //middleware
 app.use(express.json())
 app.use(authRouter)
+app.use(adminRouter)
 
 
 mongoose
